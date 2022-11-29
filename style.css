@@ -41,6 +41,24 @@ h2 {
   margin-bottom: 8px;
   color: #f5f6fa;
   position: relative;
+
+  /* order: 0; */
+}
+
+/* adding an image using ::after */
+.selected::after {
+  content: "";
+  background: url(/img/arrow-down.svg);
+  color: white;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  height: 100%;
+  width: 26px;
+  right: 10px;
+  top: 8px;
+
+  transition: all 0.4s;
 }
 
 .select-box .options-container.active {
