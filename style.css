@@ -1,3 +1,4 @@
+/* for specificity purposes the class names are trailed from parent to child i.e. if you have a - e you'd call .a .b . c .d .e if you wanted to style the .e class  */
 * {
   margin: 0;
   box-sizing: border-box;
@@ -65,6 +66,12 @@ h2 {
   max-height: 240px;
   opacity: 1;
   overflow-y: scroll;
+}
+
+/* when the .options-container has the class of .active do something to .selected::after class */
+.select-box .options-container.active + .selected::after {
+  transform: rotateX(180deg);
+  top: -10px;
 }
 
 .options-container::-webkit-scrollbar {
